@@ -1,0 +1,30 @@
+//  подключаем миксины::
+
+@mixin button {
+    // flex-box 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 125px; 
+    min-width: 125px;
+    min-height: 32px;
+    // typography 
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    text-align:center;
+    text-wrap: nowrap;
+    // block-properties
+    padding: 16px 8px;
+    border-radius: 8px;
+    transition: all 0.6s ease-out;
+
+    @include hover {
+        background-color: var(--montana-secondary);
+    }
+}
+.btn {
+    @include button();
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------
+

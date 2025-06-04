@@ -1,0 +1,92 @@
+// пишем ограничивающий контейнер: 
+[class*="__container"] { 
+width: 100%;
+max-width: var(--container-max-width);
+height: auto;
+margin: 0 auto;
+padding-inline: 16px;
+
+@include tablet-b {
+    max-width: 960px;
+}
+@include tablet {
+    max-width: none;
+    
+   
+}
+
+}
+// расчитываем стандартную типографию по фигма 
+// главный загооловок:
+h1 {
+    font-family: 'Ronix-Pro', sans-serif;
+    font-size: clamp(64px, 4.5vw, 66px);
+    line-height: calc(72 / 66 * 100%);
+}
+// заголовок раздела:
+h2 {
+    font-family: 'Ronix-Pro', sans-serif;
+    font-size: clamp(39px, 2.8vw, 41px);
+    line-height: calc(47 / 41 * 100%);
+}
+// подзаголовок: 
+h3   {
+    font-family: 'Ronix-Pro',sans-serif;
+    font-size: clamp(23px, 1.7vw, 25px);
+    line-height: calc(31 / 25 * 100%);
+}
+//  подзаголовок блока: 
+h4 {
+    font-family: 'Ronix-Pro',sans-serif;
+    font-size: clamp(18px, 1.3vw, 20px);
+    line-height: calc(26 / 20 * 100%);
+}
+p {
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: calc(24 / 18 * 100%);
+}
+a {
+    font-size: clamp(18px, 1.3vw, 20px);
+    line-height: calc(27 / 20 * 100%);
+}
+// стандартные размеры шрифта малой кнопки: 
+.button-sm {
+    font-size: clamp(20px, 3.2vw, 24px);
+    line-height: calc(24 / 32 * 100%);
+    background-color: var(--montana-accent);
+    color: var(--montana-primary);
+
+}
+// стандартные размеры шрифта большой кнопки:
+.button-lg {
+ font-size: clamp(24px, 3.5vw, 28px);
+    line-height: calc(28 / 36 * 100%);
+
+}
+li {
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: calc(24 / 18 * 100%);
+}
+// ------------------------------------------------
+// подключим шрифты: 
+@font-face {
+  font-family: 'Gilroy'; /*  Название только основного семейства */
+  src: url("/fonts/gilroy/Gilroy-Regular.woff2") format("woff2"),
+       url("/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+    font-family: 'Ronix-Pro';
+    src: url("/fonts/Ronix/ronix.woff2") format(".woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+body, html {
+    font-family: 'Gillroy', sans-serif;
+    color: var(--montana-typography);
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+}
