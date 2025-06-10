@@ -1,0 +1,29 @@
+.coming-soon {
+width: 100%;
+height: auto;
+margin-bottom: var(--margin-y);
+	
+
+		&__content {
+            width: 100%;
+            height: inherit;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            row-gap: 1.1rem;
+		}
+
+		&__banner {
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+                flex: 0 0 auto;
+            }
+		}
+
+		&__btn {
+            flex: 1 0 auto;
+		}
+}

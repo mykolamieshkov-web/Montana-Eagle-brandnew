@@ -1,0 +1,78 @@
+.carousel {
+        overflow: hidden; /* Скрываем всё, что выходит за пределы */
+        width: 98vw; /* Ширина карусели */
+        position: relative;
+        margin-block: var(--margin-y);
+        padding: 8px 12px;
+    }
+    
+    .carousel__track {
+        display: flex;
+        width: calc(200px * 6 + 10px * 12); /* Ширина трека для всех элементов */
+        animation: scroll 12s linear infinite; /* Плавная анимация */
+    }
+    
+    .carousel__picture {
+        flex: 0 0 auto; /* Фиксированный размер */
+        width: 200px; /* Ширина элемента */
+        margin: 8px 12px; /* Отступы */
+        background-color: var(--montana-secondary);
+        transition: all 0.6s ease;
+        @include hover {
+            background-color: var(--montana-hover);
+        }
+        img {
+            flex: 0 0 auto;
+            margin: 0 auto;
+            display: flex;
+            min-height: 100px;
+        }
+    }
+    
+   
+    
+    /* Анимация */
+    @keyframes scroll {
+        0% {
+            transform: translateX(50%); /* Начальное положение */
+        }
+        100% {
+            transform: translateX(calc(-200px * 3 - 10px * 6)); /* Смещаем ровно половину трека */
+        }
+    }
+    .brands {
+        width: 100%;
+        height: auto;
+        margin-bottom: var(--margin-y);
+        padding: 10px 8px;
+		
+
+		&__content {
+            display: flex;
+            flex-flow: column nowrap;
+            row-gap: 3.2rem;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 auto;
+		}
+
+		&__heading {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            row-gap: 3.5rem;
+            flex: 1 1 auto;
+		}
+        &__btns {
+            display: flex;
+            flex-flow: row wrap;
+            flex: 1 0 96%;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+        }
+}
