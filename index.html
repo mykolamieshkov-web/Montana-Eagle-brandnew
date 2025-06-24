@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
@@ -32,7 +33,7 @@
           <li class="header__item"><a href="/index.html" class="header__link">Home</a></li>
           <li class="header__item"><a href="#about" class="header__link">About</a></li>
           <li class="header__item"><a href="#brands" class="header__link">Brands</a></li>
-          <li class="header__item"><a href="contact" class="btn btn-transparency" role="button" aria-label="go to contact section on this page">Contact</a></li>
+          <li class="header__item"><a href="#contact" class="btn btn-transparency" role="button" aria-label="go to contact section on this page">Contact</a></li>
           
         </ul>
       </nav>
@@ -45,12 +46,12 @@
         <div class="hero__container">
           <div class="hero__content">
             <div class="hero__text">
-              <h1>Soaring Beyond Limits</h1>
-              <p>Providing top of the line, luxirious,<br>
+              <h1 data-aos="slide-left" data-aos-duration="600">Soaring Beyond Limits</h1>
+              <p data-aos="slide-right" data-aos-duration="500"> Providing top of the line, luxirious,<br>
               and ubique products</p>
               <div class="hero__btns">
                 <a href="#brands" class="btn btn-large" role="button" aria-label="touch the button to explore our Brands catalogue">Explore our Brands</a>
-                <a href="contact" class="btn btn-transparency" role="button" aria-label="touch the button to go to the contact section on this page"> Contact</a>
+                <a href="#contact" class="btn btn-transparency" role="button" aria-label="touch the button to go to the contact section on this page"> Contact</a>
               </div>
             </div>
             <div class="hero__picture">
@@ -65,8 +66,8 @@
         <div class="about__container">
           <div id="about" class="about__content">
         <div class="about__heading">
-          <h2>About the Company</h2>
-          <p> We are here to give our customers a diverse and reliable experience.</p>
+          <h2 data-aos="slide-right" data-aos-duration="600">About the Company</h2>
+          <p data-aos="slide-left" data-aos-duration="500"> We are here to give our customers a diverse and reliable experience.</p>
         </div>
         <div class="about__cards--row">
           <div class="about__card">
@@ -135,9 +136,9 @@
         <div class="brands__container">
           <div id="brands" class="brands__content">
             <div class="brands__heading">
-              <h2>Explore our Brands line</h2>
+              <h2 data-aos="slide-down" data-aos-duration="600">Explore our Brands line</h2>
               <div class="brands__heading brands__heading--subtitle">
-                <p>The finest brands, united under one bold identity</p>
+                <p data-aos="slide-right" data-aos-duration="500">The finest brands, united under one bold identity</p>
               </div>
             </div>
             <div class="carousel">
@@ -181,7 +182,7 @@
     </section>
     <section>
       <div class="site-map">
-        <div class="site-map__container">
+        <div id="contact" class="site-map__container">
           <div class="site-map__content">
             <div class="site-map__description">
               <div class="site-map__description site-map__description--logo">
@@ -214,5 +215,9 @@
         <p>©2025</p>
     </footer>
      </div>  
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
